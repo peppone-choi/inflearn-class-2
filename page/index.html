@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <style>
+      @font-face {
+          font-family: 'DungGeunMo';
+          src: url('../fonts/DungGeunMo.eot'),
+          url('../fonts/DungGeunMo.woff') format("woff"),
+          url('../fonts/DungGeunMo.ttf') format("truetype");
+        }
+      body {
+        font-family: "Press Start 2P", 'DungGeunMo', sans-serif;
+        background-color: #f8f8f8;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section class='nes-container is-centered' style='text-align: center;'><h1 class='nes-text is-primary' style='font-size:40px;'>ROCK PAPER SCISSORS (가위바위보)</h1></section>
+    <section class='nes-container is-centered'>
+      <div class='is-centered' style='align-self: center; display: inline-flex;' >
+        <div class="nes-container with-title is-centered" style='margin-right: 100px;'>
+          <p class="title">당신</p>
+          <p id='you-score' style='font-size:60px;'>0</p>
+        </div>
+        <div class="nes-container with-title is-centered" style='margin-inline: 100px;'>
+          <p class="title">남은 횟수</p>
+          <p id='left' style='font-size:60px;'>10</p>
+        </div>
+        <div class="nes-container with-title is-centered" style='margin-left: 100px;'>
+          <p class="title">컴퓨터</p>
+          <p id='com-score' style='font-size:60px;'>0</p>
+        </div>
+      </div>
+      <div class="nes-container with-title is-centered" style='margin: 50px; height: 300px; align-items: center;'>
+        <p style='font-size:60px;'><span id='result'></span></p>
+        <div style='display: none;' class='is-centered' id='restart'>
+          <button type="button" class='nes-btn' style='font-size: 40px; '>다시 시작하기</button>
+        </div>
+      </div>
+      <div style='margin-bottom: 40px;'>
+        <span class='nes-text' style='font-size:40px;'>선택하기</span>
+      </div>
+      <div>
+        <button class='nes-btn' id='scissors' style='margin-right: 100px; width: 200px;'><span style='font-size: 40px;'>가위</span></button>
+        <button class='nes-btn' id='rock' style='margin-inline: 100px; width: 200px;'><span style='font-size: 40px;'>바위</span></button>
+        <button class='nes-btn' id='paper' style='margin-left: 100px; width: 200px;'><span style='font-size: 40px;'>보</span></button>
+      </div>
+        <progress id='progress-bar' class="nes-progress" value="0" max="10" style='margin-top: 50px; width: 500px;'></progress>
+      
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
